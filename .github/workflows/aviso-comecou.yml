@@ -1,14 +1,23 @@
+# Nome do nosso fluxo de trabalho
 name: Aviso BBB - Começou
 
+# Gatilhos: Como e quando essa ação vai rodar
 on:
+  # Gatilho 1: Permite iniciar manualmente pela aba "Actions"
+  workflow_dispatch:
+
+  # Gatilho 2: Agendamento por horário
   schedule:
-    # Roda às 01:59 UTC (22:59 de Brasília)
+    # Roda às 01:59 UTC (que corresponde a 22:59 no horário de Brasília)
     - cron: '59 1 * * *'
 
+# Tarefas: O que a ação vai fazer
 jobs:
   enviar-aviso:
+    # Usa uma máquina virtual gratuita do GitHub para rodar o comando
     runs-on: ubuntu-latest
     steps:
+      # Passo 1: Enviar a mensagem para o Discord
       - name: Enviar mensagem para o Discord
         run: |
           curl -X POST -H "Content-Type: application/json" \
