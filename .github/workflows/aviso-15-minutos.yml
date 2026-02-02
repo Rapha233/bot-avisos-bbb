@@ -1,9 +1,7 @@
-name: Aviso BBB - 15 Minutos
+name: Manual - Aviso 15 Minutos
 
 on:
-  schedule:
-    # Roda às 01:44 UTC (22:44 de Brasília)
-    - cron: '44 1 * * *'
+  workflow_dispatch:
 
 jobs:
   enviar-aviso:
@@ -12,5 +10,5 @@ jobs:
       - name: Enviar mensagem para o Discord
         run: |
           curl -X POST -H "Content-Type: application/json" \
-          -d '{"content": " sofá! Faltam só 15 minutos!"}' \
+          -d '{"content": "🛋️ **Todo mundo pro sofá!** Faltam só 15 minutos!"}' \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
