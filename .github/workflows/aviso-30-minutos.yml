@@ -1,0 +1,16 @@
+name: Aviso BBB - 30 Minutos
+
+on:
+  schedule:
+    # Roda às 01:29 UTC (22:29 de Brasília)
+    - cron: '29 1 * * *'
+
+jobs:
+  enviar-aviso:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar mensagem para o Discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "🍿 **Preparem a pipoca!** Faltam 30 minutos para o BBB começar!"}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
