@@ -1,9 +1,7 @@
-name: Aviso BBB - 2 Minutos
+name: Manual - Aviso 2 Minutos
 
 on:
-  schedule:
-    # Roda às 01:57 UTC (22:57 de Brasília)
-    - cron: '57 1 * * *'
+  workflow_dispatch:
 
 jobs:
   enviar-aviso:
