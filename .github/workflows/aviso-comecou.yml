@@ -10,5 +10,5 @@ jobs:
       - name: Enviar mensagem para o Discord
         run: |
           curl -X POST -H "Content-Type: application/json" \
-          -d '{"content": "📺 **COMEÇOU! CHAMA O FREE WILLY E CORRE PRA TV QUE O BBB TÁ NO AR!**"}' \
+          -d '{"content": "📺 **COMEÇOU! CHAMA A ORCA E CORRE PRA TV QUE O BBB TÁ NO AR!**"}' \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
