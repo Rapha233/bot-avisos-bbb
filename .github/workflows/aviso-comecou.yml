@@ -10,5 +10,5 @@ jobs:
       - name: Enviar mensagem para o Discord
         run: |
           curl -X POST -H "Content-Type: application/json" \
-          -d '{"content": "📺 **O BBB ACABOU! MAS VOCÊ AINDA PODE CONTINUAR ASSISTINDO A NOSSA MANIPULAÇÃO AI VIVO NO MANIPULAPLAY!**"}' \
+          -d '{"content": "📺 **O BBB ACABOU! MAS VOCÊ AINDA PODE CONTINUAR ASSISTINDO A NOSSA MANIPULAÇÃO AI VIVO NO MANIPULAPLAY! O QUE MAIS TEMOS É TROXA SEM CÉREBRO QUE ACREDITA EM TUDO QUE A GENTE MOSTRA, JUNTE-SE A ELES!**"}' \
           ${{ secrets.DISCORD_WEBHOOK_URL }}
